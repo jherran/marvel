@@ -12,6 +12,10 @@
 		2314DE0F1F8BCC91004CE7C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2314DE0D1F8BCC91004CE7C5 /* Main.storyboard */; };
 		2314DE111F8BCC91004CE7C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2314DE101F8BCC91004CE7C5 /* Assets.xcassets */; };
 		2314DE141F8BCC91004CE7C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2314DE121F8BCC91004CE7C5 /* LaunchScreen.storyboard */; };
+		2318E51B1F8E20050068CAF0 /* SuperListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2318E51A1F8E20050068CAF0 /* SuperListTableViewCell.swift */; };
+		2318E51E1F8E23AD0068CAF0 /* SuperListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2318E51D1F8E23AD0068CAF0 /* SuperListTableViewCell.xib */; };
+		2318E5201F8E314A0068CAF0 /* SuperDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2318E51F1F8E314A0068CAF0 /* SuperDetailConfigurator.swift */; };
+		2318E5251F8E318A0068CAF0 /* SuperDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2318E5241F8E318A0068CAF0 /* SuperDetailViewController.swift */; };
 		238262581F8BCE5900404D1C /* SuperListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238262571F8BCE5900404D1C /* SuperListConfigurator.swift */; };
 		2382625A1F8BCEEB00404D1C /* SuperListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238262591F8BCEEB00404D1C /* SuperListPresenter.swift */; };
 		2382625C1F8BCF6600404D1C /* SuperListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2382625B1F8BCF6600404D1C /* SuperListRouter.swift */; };
@@ -28,6 +32,10 @@
 		2314DE101F8BCC91004CE7C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2314DE131F8BCC91004CE7C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2314DE151F8BCC91004CE7C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2318E51A1F8E20050068CAF0 /* SuperListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperListTableViewCell.swift; sourceTree = "<group>"; };
+		2318E51D1F8E23AD0068CAF0 /* SuperListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuperListTableViewCell.xib; sourceTree = "<group>"; };
+		2318E51F1F8E314A0068CAF0 /* SuperDetailConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperDetailConfigurator.swift; sourceTree = "<group>"; };
+		2318E5241F8E318A0068CAF0 /* SuperDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperDetailViewController.swift; sourceTree = "<group>"; };
 		238262571F8BCE5900404D1C /* SuperListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperListConfigurator.swift; sourceTree = "<group>"; };
 		238262591F8BCEEB00404D1C /* SuperListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperListPresenter.swift; sourceTree = "<group>"; };
 		2382625B1F8BCF6600404D1C /* SuperListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperListRouter.swift; sourceTree = "<group>"; };
@@ -69,6 +77,8 @@
 			children = (
 				2314DE091F8BCC91004CE7C5 /* AppDelegate.swift */,
 				238262661F8BD82300404D1C /* SuperList */,
+				2318E5211F8E31590068CAF0 /* SuperDetail */,
+				238262691F8BF85D00404D1C /* Model */,
 				238262651F8BD81600404D1C /* Extensions */,
 				2314DE0D1F8BCC91004CE7C5 /* Main.storyboard */,
 				2314DE101F8BCC91004CE7C5 /* Assets.xcassets */,
@@ -77,6 +87,24 @@
 				238262611F8BD68600404D1C /* marvel-Bridging-Header.h */,
 			);
 			path = marvel;
+			sourceTree = "<group>";
+		};
+		2318E51C1F8E201E0068CAF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2318E51A1F8E20050068CAF0 /* SuperListTableViewCell.swift */,
+				2318E51D1F8E23AD0068CAF0 /* SuperListTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2318E5211F8E31590068CAF0 /* SuperDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2318E51F1F8E314A0068CAF0 /* SuperDetailConfigurator.swift */,
+				2318E5241F8E318A0068CAF0 /* SuperDetailViewController.swift */,
+			);
+			path = SuperDetail;
 			sourceTree = "<group>";
 		};
 		238262651F8BD81600404D1C /* Extensions */ = {
@@ -95,7 +123,7 @@
 				2382625B1F8BCF6600404D1C /* SuperListRouter.swift */,
 				2382625D1F8BD00500404D1C /* SuperListInteractor.swift */,
 				2314DE0B1F8BCC91004CE7C5 /* SuperListViewController.swift */,
-				238262691F8BF85D00404D1C /* Model */,
+				2318E51C1F8E201E0068CAF0 /* View */,
 			);
 			path = SuperList;
 			sourceTree = "<group>";
@@ -169,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2314DE141F8BCC91004CE7C5 /* LaunchScreen.storyboard in Resources */,
+				2318E51E1F8E23AD0068CAF0 /* SuperListTableViewCell.xib in Resources */,
 				2314DE111F8BCC91004CE7C5 /* Assets.xcassets in Resources */,
 				2314DE0F1F8BCC91004CE7C5 /* Main.storyboard in Resources */,
 			);
@@ -184,7 +213,10 @@
 				2382625E1F8BD00500404D1C /* SuperListInteractor.swift in Sources */,
 				2314DE0C1F8BCC91004CE7C5 /* SuperListViewController.swift in Sources */,
 				2314DE0A1F8BCC91004CE7C5 /* AppDelegate.swift in Sources */,
+				2318E5201F8E314A0068CAF0 /* SuperDetailConfigurator.swift in Sources */,
+				2318E51B1F8E20050068CAF0 /* SuperListTableViewCell.swift in Sources */,
 				2382625A1F8BCEEB00404D1C /* SuperListPresenter.swift in Sources */,
+				2318E5251F8E318A0068CAF0 /* SuperDetailViewController.swift in Sources */,
 				238262601F8BD50400404D1C /* Extensions.swift in Sources */,
 				238262681F8BDD0E00404D1C /* Super.swift in Sources */,
 				238262581F8BCE5900404D1C /* SuperListConfigurator.swift in Sources */,
@@ -327,6 +359,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZBJBUEGSZF;
 				INFOPLIST_FILE = marvel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jherran.marvel;
@@ -344,6 +377,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZBJBUEGSZF;
 				INFOPLIST_FILE = marvel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jherran.marvel;
