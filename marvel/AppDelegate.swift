@@ -44,8 +44,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func configureSuperList() {
         //Get init view controller
-        let superListViewController = self.window!.rootViewController as! SuperListViewController
-        
+//        let superListViewController = self.window!.rootViewController as! SuperListViewController
+        let navigationController = self.window!.rootViewController as! UINavigationController
+        let superListViewController = navigationController.topViewController as! SuperListViewController
         SuperListConfigurator.sharedInstance.configure(viewController: superListViewController)
     }
 

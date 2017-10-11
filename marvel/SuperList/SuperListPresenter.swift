@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 protocol SuperListPresenterOutput: class {
-    
+    func superList(result: [SuperResult])
+    func superError(error: String?)
 }
 
 class SuperListPresenter: SuperListInteractorOutput {
@@ -24,12 +25,16 @@ class SuperListPresenter: SuperListInteractorOutput {
         interactor?.getSuperListFromMarvel()
     }
     
+    func goToDetailWith(hero: SuperResult, image: UIImage) {
+        router?.showSuperDetailFor(hero: hero, image: image)
+    }
+    
     // MARK: - SuperListInteractorOutput
     func retrievedSuperList(result: [SuperResult]) {
-        print(result)
+        delegateOutput?.superList(result: result)
     }
     
     func couldNotRetrieveSuperList(error: String?) {
-        
+        delegateOutput?.superError(error: error)
     }
 }

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SuperListTableViewCellIdentifier" rowHeight="100" id="2dK-MB-wnz" customClass="SuperListTableViewCell" customModule="marvel" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2dK-MB-wnz" id="njn-Dg-uUe">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PIf-DH-Efb">
+                        <rect key="frame" x="12" y="7" width="87" height="87"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="87" id="AYn-RE-osV"/>
+                            <constraint firstAttribute="height" constant="87" id="a7n-Bn-sQI"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mor-Sa-nyH">
+                        <rect key="frame" x="114" y="7" width="194" height="87"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="mor-Sa-nyH" firstAttribute="centerY" secondItem="njn-Dg-uUe" secondAttribute="centerY" id="0eE-mg-HzG"/>
+                    <constraint firstItem="PIf-DH-Efb" firstAttribute="leading" secondItem="njn-Dg-uUe" secondAttribute="leading" constant="12" id="M6n-mZ-fte"/>
+                    <constraint firstAttribute="trailing" secondItem="mor-Sa-nyH" secondAttribute="trailing" constant="12" id="OZ2-Id-vZV"/>
+                    <constraint firstItem="mor-Sa-nyH" firstAttribute="leading" secondItem="PIf-DH-Efb" secondAttribute="trailing" constant="15" id="QbY-bW-lrk"/>
+                    <constraint firstItem="mor-Sa-nyH" firstAttribute="height" secondItem="PIf-DH-Efb" secondAttribute="height" id="U5Q-Wl-BuZ"/>
+                    <constraint firstItem="PIf-DH-Efb" firstAttribute="centerY" secondItem="njn-Dg-uUe" secondAttribute="centerY" id="t1e-9i-sNf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="heroImage" destination="PIf-DH-Efb" id="51S-99-aaB"/>
+                <outlet property="heroName" destination="mor-Sa-nyH" id="slb-xQ-zNQ"/>
+            </connections>
+            <point key="canvasLocation" x="-196" y="-68.5"/>
+        </tableViewCell>
+    </objects>
+</document>

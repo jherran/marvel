@@ -40,7 +40,11 @@ class SuperListInteractor: NSObject {
             
             let decoder = JSONDecoder()
             do {
-                let superList = try decoder.decode(Super.self, from: responseData)
+                var superList = try decoder.decode(Super.self, from: responseData)
+                // quick fix to avoid adding app transport security
+                for i in 0...superList.data.results.count - 1 {
+                    superList.data.results[i].thumbnail.path = superList.data.results[i].thumbnail.path.replacingOccurrences(of: "http://", with: "https://")
+                }
                 self.delegateOutput?.retrievedSuperList(result: superList.data.results)
             } catch {
                 self.delegateOutput?.couldNotRetrieveSuperList(error: "Error: trying to convert data to JSON")

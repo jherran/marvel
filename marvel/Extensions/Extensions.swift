@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 extension String {
     func MD5() -> String {
@@ -39,5 +39,22 @@ extension Formatter {
 extension Date {
     var timestamp: String {
         return Formatter.iso8601.string(from: self)
+    }
+}
+
+
+extension UIImageView {
+    func imageFrom(stringURL: String) {
+        guard let url = URL(string: stringURL) else { return }
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else { return }
+            DispatchQueue.main.async() {
+                self.image = image
+            }
+            }.resume()
     }
 }
